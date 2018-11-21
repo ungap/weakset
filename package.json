@@ -1,0 +1,30 @@
+{
+  "name": "@da/weakset",
+  "version": "0.0.0",
+  "description": "WeakSet for IE11 and engines with a WeakMap",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "min.js",
+  "scripts": {
+    "build": "npm run cjs && npm run esm && npm run min && npm run size",
+    "cjs": "cp index.js cjs/ && echo 'module.exports = $WeakSet;' >> cjs/index.js",
+    "esm": "cp index.js esm/ && echo 'export default $WeakSet;' >> esm/index.js",
+    "min": "uglifyjs index.js --support-ie8 --comments=/^!/ -c -m -o min.js",
+    "size": "cat index.js | wc -c && cat min.js | wc -c && gzip -c9 min.js | wc -c && cat min.js | brotli | wc -c",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "test": "istanbul cover test/index.js"
+  },
+  "keywords": [
+    "WeakSet",
+    "polyfill",
+    "legacy"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "uglify-js": "^2.8.29"
+  },
+  "dependencies": {}
+}
