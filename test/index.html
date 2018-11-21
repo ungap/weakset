@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ungap WeakSet</title>
+  <script>this.WeakMap||document.write('<script src="https://unpkg.com/@ungap/weakmap"><\x2fscript>')</script>
+  <script src="global.js"></script>
+  <script type="module">
+  import WS from '../esm/index.js';
+  window.WS = WS;
+  </script>
+  <script>
+  this.onload = function () {
+    if (!this.WM)
+      loadScript('../min.js', function () {
+        loadTest(WeakSet, 'WeakSet!');
+      });
+    else {
+      console.assert(WS === WeakSet);
+      loadTest(WeakSet, 'WeakSet!');
+    }
+  };
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

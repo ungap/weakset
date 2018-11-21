@@ -1,9 +1,8 @@
 /*! (c) Andrea Giammarchi - ISC */
-var $WeakSet;
-try { $WeakSet = WeakSet; }
+try { new WeakSet; }
 catch (o_O) {
   // requires a global WeakMap
-  $WeakSet = (function (WeakMap) {
+  WeakSet = (function (WeakMap) {
     var all = new WeakMap;
     var proto = WeakSet.prototype;
     proto.add = function (value) {
@@ -23,4 +22,4 @@ catch (o_O) {
     }
   }(WeakMap));
 }
-export default $WeakSet;
+export default WeakSet;
