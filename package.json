@@ -1,6 +1,6 @@
 {
   "name": "@ungap/weakset",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "WeakSet for IE11 and engines with a WeakMap",
   "main": "cjs/index.js",
   "module": "esm/index.js",
