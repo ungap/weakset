@@ -1,5 +1,5 @@
 {
-  "name": "@da/weakset",
+  "name": "@ungap/weakset",
   "version": "0.0.0",
   "description": "WeakSet for IE11 and engines with a WeakMap",
   "main": "cjs/index.js",
@@ -26,5 +26,12 @@
     "istanbul": "^0.4.5",
     "uglify-js": "^2.8.29"
   },
-  "dependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ungap/weakset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ungap/weakset/issues"
+  },
+  "homepage": "https://github.com/ungap/weakset#readme"
 }
