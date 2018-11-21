@@ -4,6 +4,6 @@
 
 A polyfill for IE11 or browsers that have a WeakMap, but not a [WeakSet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet).
 
-  * CDN via https://unpkg.com/@legacy/weakset
-  * ESM via `import WeakSet from '@legacy/weakset'`
-  * CJS via `const WeakSet = require('@legacy/weakset')`
+  * CDN via https://unpkg.com/@ungap/weakset
+  * ESM via `import WeakSet from '@ungap/weakset'`
+  * CJS via `const WeakSet = require('@ungap/weakset')`

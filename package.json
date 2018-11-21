@@ -6,7 +6,7 @@
   "module": "esm/index.js",
   "unpkg": "min.js",
   "scripts": {
-    "build": "npm run cjs && npm run esm && npm run min && npm run size",
+    "build": "npm run cjs && npm run esm && npm run min && npm run test && npm run size",
     "cjs": "cp index.js cjs/ && echo 'module.exports = $WeakSet;' >> cjs/index.js",
     "esm": "cp index.js esm/ && echo 'export default $WeakSet;' >> esm/index.js",
     "min": "uglifyjs index.js --support-ie8 --comments=/^!/ -c -m -o min.js",
