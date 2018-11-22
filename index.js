@@ -1,7 +1,7 @@
 /*! (c) Andrea Giammarchi - ISC */
 try { new WeakSet; }
 catch (o_O) {
-  // requires a global WeakMap
+  // requires a global WeakMap (IE11+)
   WeakSet = (function (WeakMap) {
     var all = new WeakMap;
     var proto = WeakSet.prototype;
