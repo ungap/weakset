@@ -7,3 +7,7 @@ A polyfill for IE11 or browsers that have a WeakMap, but not a [WeakSet](https:/
   * CDN via https://unpkg.com/@ungap/weakset
   * ESM via `import WeakSet from '@ungap/weakset'`
   * CJS via `const WeakSet = require('@ungap/weakset')`
+
+Compatible down to IE9, works well with ES5 shim upfront in IE8 (and maybe lower too).
+
+[Live test](https://ungap.github.io/weakset/test/)
