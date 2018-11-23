@@ -1,2 +1,2 @@
 /*! (c) Andrea Giammarchi - ISC */
-try{new WeakSet}catch(o_O){!function(t){var e=new t,n=(WeakSet=function(n){"use strict";e.set(this,new t),n&&n.forEach(this.add,this)}).prototype;n.add=function(t){return e.get(this).set(t,1),this},n["delete"]=function(t){return e.get(this)["delete"](t)},n.has=function(t){return e.get(this).has(t)}}(WeakMap)}
+var self=this||{};try{self.WeakSet=WeakSet}catch(WeakSet){!function(t){function e(e){"use strict";s.set(this,new t),e&&e.forEach(this.add,this)}var s=new t,n=e.prototype;n.add=function(t){return s.get(this).set(t,1),this},n["delete"]=function(t){return s.get(this)["delete"](t)},n.has=function(t){return s.get(this).has(t)},self.WeakSet=e}(WeakMap)}

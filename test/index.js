@@ -1,10 +1,27 @@
 
 
 var WeakSet = require('../cjs');
+var $WeakSet = WeakSet;
 test();
 
 delete require.cache[require.resolve('../cjs')];
 global.WeakSet = void 0;
+
+if (typeof process !== 'undefined') {
+  var i = 0;
+  Object.defineProperty(global, 'WeakSet', {
+    configurable: true,
+    get: function () {
+      if (0 === i++)
+        throw WeakSet;
+      return $WeakSet;
+    },
+    set: function (WeakSet) {
+      delete global.WeakSet;
+      global.WeakSet = WeakSet;
+    }
+  });
+}
 
 WeakSet = require('../cjs');
 test();
